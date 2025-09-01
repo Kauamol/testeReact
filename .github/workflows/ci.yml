@@ -20,14 +20,14 @@ jobs:
           node-version: 16
 
       - name: Instalar dependências
-        working-directory: ./testeReact3   # <- pasta do seu React
+        working-directory: ./testeReact   # <- pasta do seu React
         run: npm install
 
       - name: Rodar testes
-        working-directory: ./testeReact3
+        working-directory: ./testeReact
         run: npm test -- --watchAll=false
 
       - name: Build aplicação
-        working-directory: ./testeReact3
+        working-directory: ./testeReact
         run: npm run build
 
